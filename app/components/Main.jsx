@@ -1,12 +1,14 @@
 var React = require('react');
 var NavBar = require('NavBar');
+var Timer = require('Timer');
+var Countdown = require('Countdown');
 
 var Main = (props) => {
     return (
       <div>
         <div>
+          <NavBar/>
           <div>
-            <NavBar/>
             <p>Main.jsx Rendered</p>
             {props.children}
           </div>
