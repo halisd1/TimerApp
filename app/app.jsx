@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var {Route, Router, IndexRoute, hashHistory, browserHistory} = require('react-router');
 var Main = require('Main');
 var Timer = require('Timer');
 var Countdown = require('Countdown');
@@ -13,10 +13,10 @@ $(document).foundation();
 require('appStyles');
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
       <Route path="/" component={Main}>
-        <Route path="countdown" component={Countdown}/>
         <IndexRoute component={Timer}/>
+        <Route path="countdown" component={Countdown}/>
       </Route>
   </Router>,
   document.getElementById('app')
