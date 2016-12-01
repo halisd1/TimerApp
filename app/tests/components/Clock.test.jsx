@@ -7,11 +7,22 @@ import TestPackage from 'react-addons-test-utils';
 import Clock from 'Clock';
 
 describe('Clock', () => {
-  it('should exist', ()=> {
+  it('should exist', () => {
     expect(Clock).toExist();
   });
+
+  describe('should render', () => {
+    it('should render clock to output', () => {
+      var clock = TestPackage.renderIntoDocument(<Clock totalSeconds={62}/>);
+      var $el = $(ReactDOM.findDOMNode(clock));
+      var actualText = $el.find('.clock-text').text();
+
+      expect(actualText).toBe('01:02');
+    });
+  });
+
   describe('Format Seconds', () => {
-    it('should format seconds', ()=>{
+    it('should format seconds', () =>{
       var clock = TestPackage.renderIntoDocument(<Clock/>);
       var seconds = 615;
       var expected = '10:15';
