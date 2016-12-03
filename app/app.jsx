@@ -13,7 +13,7 @@ $(document).foundation();
 require('appStyles');
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
       <Route path="/" component={Main}>
         <IndexRoute component={Timer}/>
         <Route path="countdown" component={Countdown}/>

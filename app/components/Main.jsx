@@ -6,10 +6,10 @@ var Countdown = require('Countdown');
 var Main = (props) => {
     return (
       <div>
-        <div>
           <NavBar/>
-          <div>
-            <p>Main.jsx Rendered</p>
+        <div className="row">
+          <div className="column small-centered medium-6 large-4">
+            Main.jsx Rendered
             {props.children}
           </div>
         </div>
