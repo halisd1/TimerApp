@@ -13,6 +13,7 @@ var Controls = React.createClass({
     }
   },
 
+
   render(){
     var {timerState} = this.props;
     var renderStartStopButton = () => {
