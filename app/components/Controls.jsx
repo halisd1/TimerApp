@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 var Controls = React.createClass({
   propTypes:{
     timerState: React.PropTypes.string.isRequired,
-    onStatusChange: React.PropTypes.func.isRequired
+    onStatusChange: React.PropTypes.func.isRequired,
   },
 
   onStatusChange: function (newStatus){
