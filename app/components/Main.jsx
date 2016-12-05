@@ -9,7 +9,6 @@ var Main = (props) => {
           <NavBar/>
         <div className="row">
           <div className="column small-centered medium-6 large-4">
-            Main.jsx Rendered
             {props.children}
           </div>
         </div>
