@@ -26,12 +26,18 @@ var Test = React.createClass({
     return value * value;
   },
 
+  consoleTimer: function(){
+    this.timer = setInterval(() => {
+      console.log("it has been one second")
+    },1000)
+  },
+
   render(){
     var {value} = this.state;
 
     return(
       <div>
-        The squared value of {value} equals to {this.addition(value)}.
+        The squared {this.consoleTimer()} value of {value} equals to {this.addition(value)}.
       <form className="text" ref="form" onSubmit={this.onSubmit}>
         <div><input placeholder="Enter Number" ref="value"></input></div>
         <div><button className="hollow button">Enter value</button></div>
