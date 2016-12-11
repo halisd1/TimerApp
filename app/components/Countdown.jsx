@@ -1,7 +1,7 @@
-var React = require('react');
-var Clock = require('Clock');
-var CountdownForm = require ('CountdownForm');
-var Controls = require('Controls');
+import React from 'react';
+import Clock from 'Clock';
+import CountdownForm from 'CountdownForm';
+import Controls from 'Controls';
 
 var Countdown = React.createClass({
   getInitialState: function (){
@@ -27,18 +27,12 @@ var Countdown = React.createClass({
       }
     },
 
-    componentWillUpdate: function(nextProps, nextState){
-    },
-
-    componentWillMount: function(){
-      console.log('componentWillMount');
-    },
-
     componentDidMount: function(){
       console.log('componentDidMount');
     },
 
     componentWillUnmount: function(){
+      console.log('Interval Cleared');
       clearInterval(this.timer);
       this.timer = undefined;
     },
@@ -52,7 +46,7 @@ var Countdown = React.createClass({
         if (newCount === 0 ){
           this.setState({timerState: 'stopped'});
         }
-      }, 1000);
+      }, 10);
     },
 
   handleSetCountdown: function (seconds){

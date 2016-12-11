@@ -10,8 +10,8 @@ describe('Countdown Component', () => {
   it('should exist', () => {
     expect(Countdown).toExist();
   });
-
   describe('handleSetCountdown', () => {
+  /*
     it('should set State to started and countdown', (done) => {
       var countdown = TestPackage.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(10);
@@ -24,6 +24,7 @@ describe('Countdown Component', () => {
         done();
       }, 1001);
     });
+*/
 
     it('should not become a negative value after a while', (done) => {
       var countdown = TestPackage.renderIntoDocument(<Countdown/>);
